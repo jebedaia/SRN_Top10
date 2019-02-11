@@ -259,3 +259,8 @@ paket-files/
 # Python Tools for Visual Studio (PTVS)
 __pycache__/
 *.pyc
+/SRN_Top10/Content/bowstyles.css
+/SRN_Top10/Content/wobstyles.css
+/SRN_Top10/Footers/buildings_decap.png
+/SRN_Top10/Footers/buildingsa.png
+/SRN_Top10/Footers/graph.jpg

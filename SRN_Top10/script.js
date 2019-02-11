@@ -3,13 +3,14 @@ var altColor = 'black';
 var duration = 2.5;
 const transitionType = 'ease';
 
+var debugCounter = 0;
+
 //Scroll Variables
 var scrollRatio;
 var transitionHeight;
-var y_scroll_position;
 var scrollDistPastTop;
 
-var aboutSectionActive = false;
+var aboutSectionVisible = false;
 
 $(window).scroll(function () {
     if (checkScrollRatio()) {
@@ -20,22 +21,13 @@ $(window).scroll(function () {
 });
 
 $(window).on('resize', function () {
+    //when screen changes size, update height to transition at, and size of radio station logos
     updateTransitionHeight();
     updateLogoHeight();
-    //when screen changes size, update height to transition at
 });
 
 function updateTransitionHeight() {
     const firstDiv = '#top10Container';
-    /*var top = $(firstDiv).offset().top + $(firstDiv).height();
-    var bottom = $(secondDiv).offset().top;*/
-    /*const body = document.body,
-        html = document.documentElement;
-    const documentHeight = Math.max(body.scrollHeight, body.offsetHeight,
-        html.clientHeight, html.scrollHeight, html.offsetHeight);
-    const transition_position = $(firstDiv).offset().top + ($(firstDiv).height());
-    const transition_bottom = Math.min($(secondDiv).offset().top - document.documentElement.clientHeight,
-        documentHeight - document.documentElement.clientHeight);*/
 
     const transition_position = ($(firstDiv).offset().top + ($(firstDiv).height())) - document.documentElement.clientHeight * (1 / 2);
     const body = document.body,
@@ -50,12 +42,14 @@ function updateLogoHeight() {
     const box = ".row.row-listing .text-left.column-logo .container-logo .logo";
     
     $(box).each(function () {
-        
+
+        $(this).removeAttr('style');//reset style before messing about
+        $(this).parent().removeAttr('style');
+        $(this).parent().parent().removeAttr('style');
+        $(this).parent().parent().parent().removeAttr('style');
+
         const newSize = $(this).parent().parent().parent().parent().height();
         const oldSize = $(this).parent().height();
-        const containerWidth = $(this).parent().width();//stays the same as css, unlike the other variables here
-
-        console.log(oldSize, newSize);
 
         $(this).parent().parent().parent().css({
             //row-listing
@@ -71,11 +65,11 @@ function updateLogoHeight() {
         });
         
         //add padding for logo to vertically center it
-        const paddingSize = Math.abs(newSize - containerWidth) / 2;
+        const paddingSize = Math.abs(newSize - oldSize) / 2;
         $(this).css({
             //logo
-            "height": Math.min(oldSize, newSize, containerWidth),
-            "margin-top": paddingSize
+            "height": Math.floor(Math.min(oldSize, newSize)),
+            "margin-top": Math.floor(paddingSize)
         });
     });
 }
@@ -212,7 +206,7 @@ function addTransitionCSS() {
 }
 
 const writeTop10 = async () => {
-    var srnTop10 = await fetch('http://mame.cab/srn/srn-top10.json')
+    var srnTop10 = await fetch('http://mame.cab/srn/srn-top10.json')//
         .then(response => response.json())
         .catch(() => {
             return undefined;
@@ -324,9 +318,9 @@ function add_html_row_hitpick(station, logo, track, artist, html_parent, link) {
 }
 
 function aboutButtonClick() {
-    if (aboutSectionActive) {
+    if (aboutSectionVisible) {
         $(".aboutSection").remove();
-        aboutSectionActive = false;
+        aboutSectionVisible = false;
 
     } else {
 
@@ -337,6 +331,6 @@ function aboutButtonClick() {
         row.append(column);
 
         $(".aboutButton").append(row);
-        aboutSectionActive = true;
+        aboutSectionVisible = true;
     }
 }

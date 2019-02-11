@@ -124,7 +124,6 @@
         top: -25%;
     }
 }
-
 @media (min-width: 360px) {
     #container-header-top10 {
         padding-bottom: 22%;
@@ -205,6 +204,14 @@
 
     #container-header-hitPicks {
         padding-bottom: 26%;
+    }
+
+    #lolAnotherContainer-top10 {
+        overflow: initial;
+    }
+
+    #lolAnotherContainer-hitPicks {
+        overflow: initial;
     }
 
     .headerImage.SRN {
@@ -561,15 +568,21 @@
     @media (min-width: 360px) {
         .row.row-listing .text-left.column-track {
             max-width: 89%;
-            padding-left: 5.2em;
+            padding-left: 4.4em;
         }
     }
-    @media (min-width: 400px) {
-        .row.row-listing .text-left.column-track {
-            max-width: 90%;
-            padding-left: 4.6em;
-        }
+@media (min-width: 400px) {
+    .row.row-listing .text-left.column-track {
+        max-width: 90%;
+        padding-left: 4.4em;
     }
+}
+@media (min-width: 450px) {
+    .row.row-listing .text-left.column-track {
+        max-width: 90%;
+        padding-left: 4em;
+    }
+}
     @media (min-width: 500px) {
         .row.row-listing .text-left.column-track {
             max-width: 90%;
@@ -673,10 +686,10 @@
     }
     @media (max-width: 299.9px) {
         .row.row-listing .text-left.column-logo {
-            max-height: 2.975em;
+            max-height: 3em;
         }
             .row.row-listing .text-left.column-logo .container-logo {
-                width: 2.975em;
+                width: 3em;
             }
     }
     @media (max-width: 249.9px) {

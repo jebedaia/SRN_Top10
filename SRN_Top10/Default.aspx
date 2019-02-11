@@ -1,6 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="oldDefault.aspx.cs" Inherits="SRN_Top10.Default" %>
-
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
@@ -107,7 +105,7 @@
             </div>
         </div>
         <div class="container-footer black hidden">
-            <img class="footer float-right black" src="Footers/graph_big_c_cut.png" alt="Footer Art" />
+            <img class="footer float-right black" src="Footers/graph.png" alt="Footer Art" />
         </div>
     </body>
 </html>
