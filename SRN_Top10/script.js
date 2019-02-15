@@ -132,8 +132,8 @@ function updateElementLightness(lightness) {
     $(".row.row-listing").css({
         "border-color": float2color(0.35 - input * (1 - 0.35))
     });
-    $(".row.row-listing").css({
-        "box-shadow": '1px 1px 2px ' + float2color(input * (1 - 0.35))
+    $(".myShadow").css({
+        "box-shadow": "1px 1px 2px " + float2color(0.8 - (1-input) * (0.8))
     });
     /*
     $(".row.row-listing").css({
@@ -196,7 +196,7 @@ function addTransitionCSS() {
     addOneTransitionCSS(".row.row-listing .text-left.column-rank", "color");
     addOneTransitionCSS(".row.row-listing .text-left.column-track .artist", "color");
     addOneTransitionCSS(".row.row-listing", "border-color");
-    addOneTransitionCSS(".row.row-listing", "box-shadow");
+    addOneTransitionCSS(".myShadow", "box-shadow");
     /*addOneTransitionCSS(".row.row-listing", "background-color");*/
     addOneTransitionCSS(".headerImage.SRN.black", "opacity");
     addOneTransitionCSS(".headerImage.SRN.white", "opacity");
@@ -270,7 +270,7 @@ function addErrorMessage(errorMessage, html_parent) {
 </div>
 */
 function add_html_row_listing(rank, track, artist, html_parent) {
-    row = $('<div class="row row-listing">');
+    row = $('<div class="row row-listing myShadow">');
 
     leftColumn = $('<div class="column-thin text-left column-rank">').html(rank);
     row.append(leftColumn);
@@ -299,7 +299,7 @@ function add_html_row_listing(rank, track, artist, html_parent) {
 */
 function add_html_row_hitpick(station, logo, track, artist, html_parent, link) {
     //whole row
-    row = $('<div class="row row-listing">');
+    row = $('<div class="row row-listing myShadow">');
 
     //left column
     logoImage = $('<img class="logo" src="' + logo + '" alt="' + station + '" />');
@@ -317,6 +317,16 @@ function add_html_row_hitpick(station, logo, track, artist, html_parent, link) {
     $(html_parent).append(row);
 }
 
+/*
+ * Equivalent HTML:
+<div class="row row-listing aboutSection text myShadow">
+    <div class="col-12">
+        <div class="aboutText text">
+            "Comment or statement about what the SRN is and what the goals/function of the Top 10 is"
+        </div>
+    </div>
+</div>
+*/
 function aboutButtonClick() {
     if (aboutSectionVisible) {
         $(".aboutSection").remove();
@@ -324,7 +334,7 @@ function aboutButtonClick() {
 
     } else {
 
-        row = $('<div class="row row-listing aboutSection text">');
+        row = $('<div class="row row-listing aboutSection text myShadow">');
 
         column = $('<div class="col-12">');
         column.append($('<div class="aboutText text">').html("Comment or statement about what the SRN is and what the goals/function of the Top 10 is"));
@@ -332,5 +342,17 @@ function aboutButtonClick() {
 
         $(".aboutButton").append(row);
         aboutSectionVisible = true;
+        updateElementLightness(scrollRatio);
+        fadeElements(altColor, scrollRatio);
+        fadeElements(color, 1 - scrollRatio);
     }
+    /*if (aboutSectionVisible) {
+        $(".aboutSection").addClass("aboutHidden");
+        aboutSectionVisible = false;
+
+    } else {
+
+        $('.aboutHidden').removeClass("aboutHidden");
+        aboutSectionVisible = true;
+    }*/
 }

@@ -87,7 +87,7 @@
     overflow: hidden;
 }
 #lolAnotherContainer-hitPicks {
-    top: -2200%;
+    top: -11200%;
     left: 0;
     width: 100%;
     height: auto;
@@ -113,7 +113,7 @@
     }
 
     #container-header-hitPicks {
-        padding-bottom: 12%;
+        padding-bottom: 5px;
     }
 
     #lolAnotherContainer-top10 {
@@ -121,7 +121,7 @@
     }
 
     #lolAnotherContainer-hitPicks {
-        top: -25%;
+        top: -650%;
     }
 }
 @media (min-width: 360px) {
@@ -386,44 +386,48 @@
 @media (max-width: 359.9px) {
     #hitPicksContainer {
         position: relative;
-        top: 20%;
+        top: 15%;
     }
     .aboutButtonText {
         position: relative;
-        top: 5em;
+        top: 3em;
     }
     .aboutSection {
         position: relative;
-        top: 5em;
+        top: 3em;
     }
 }
 @media (max-width: 299.9px) {
     #hitPicksContainer {
         position: relative;
-        top: 30%;
+        top: 15%;
     }
     .aboutButtonText {
         position: relative;
-        top: 7.5em;
+        top: 3em;
     }
     .aboutSection {
         position: relative;
-        top: 7.5em;
+        top: 3em;
     }
 }
 @media (max-width: 249.9px) {
     #hitPicksContainer {
         position: relative;
-        top: 35%;
+        top: 17%;
     }
     .aboutButtonText {
         position: relative;
-        top: 8.5em;
+        top: 3em;
     }
     .aboutSection {
         position: relative;
-        top: 8.5em;
+        top: 3em;
     }
+}
+
+.aboutHidden {
+    visibility: hidden;
 }
 
 .aboutButtonText {
@@ -475,6 +479,10 @@
     padding-bottom: 0.95em;
 }
 
+.myShadow {
+    box-shadow: 1px 1px 3px #999;
+}
+
 .row.row-listing {
     border-radius: 0.3rem;
     border: 1px solid;
@@ -482,7 +490,6 @@
     margin-bottom: 0.5em;
     margin-left: 0em;
     margin-right: 0em;
-    box-shadow: 1px 1px 2px #bbb;
 }
 
     .row.row-listing .text-left.column-rank {
@@ -729,7 +736,7 @@
 
 @media (max-width: 1799.98px) {
     .container-footer.black {
-        height: 20em;
+        height: 14em;
     }
 
     .footer.black {
@@ -739,12 +746,12 @@
 
 @media (min-width: 1800px) {
     .container-footer.black {
-        width: 100%;
+        width: 50%;
         padding-top: 4%;
     }
 
     .footer.black {
-        width: 100%;
+        width: 200%;
         height: auto;
     }
 

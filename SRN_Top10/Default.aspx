@@ -29,19 +29,19 @@
                                 <div class="col-xs-10">
                                     <div class="container-bigLogo">
                                         <span class="container-helper-bigLogo">
-                                            <a href="bowDefault.aspx" class="logoButton"><img class="bigLogo black" src="Logos/Mightymouth_SRN_clipped_c.png" alt="SRN Logo" /></a>
+                                            <a class="logoButton"><img class="bigLogo black" src="Logos/Mightymouth_SRN_clipped_c.png" alt="SRN Logo" /></a>
                                         </span>
                                         <span class="container-helper-bigLogo">
-                                            <a href="bowDefault.aspx" class="logoButton"><img class="bigLogo black" src="Logos/Mightymouth_SRN_clipped_c.png" alt="SRN Logo" /></a>
+                                            <a class="logoButton"><img class="bigLogo black" src="Logos/Mightymouth_SRN_clipped_c.png" alt="SRN Logo" /></a>
                                         </span>
                                         <span class="container-helper-bigLogo">
-                                            <a href="bowDefault.aspx" class="logoButton"><img class="bigLogo black" src="Logos/Mightymouth_SRN_clipped_c.png" alt="SRN Logo" /></a>
+                                            <a class="logoButton"><img class="bigLogo black" src="Logos/Mightymouth_SRN_clipped_c.png" alt="SRN Logo" /></a>
                                         </span>
                                         <span class="container-helper-bigLogo">
-                                            <a href="bowDefault.aspx" class="logoButton"><img class="bigLogo black" src="Logos/Mightymouth_SRN_clipped_c.png" alt="SRN Logo" /></a>
+                                            <a class="logoButton"><img class="bigLogo black" src="Logos/Mightymouth_SRN_clipped_c.png" alt="SRN Logo" /></a>
                                         </span>
                                         <span class="container-helper-bigLogo">
-                                            <a href="bowDefault.aspx" class="logoButton"><img class="bigLogo black" src="Logos/Mightymouth_SRN_clipped_c.png" alt="SRN Logo" /></a>
+                                            <a class="logoButton"><img class="bigLogo black" src="Logos/Mightymouth_SRN_clipped_c.png" alt="SRN Logo" /></a>
                                         </span>
                                     </div>
                                 </div>
@@ -89,7 +89,16 @@
                             <div class="row">
                                 <div class="col-xs-1"></div>
                                 <div class="col-xs-10 text-right hidden">
-                                    <div class="aboutButton"><a class="aboutButtonText text" onclick="aboutButtonClick()">WHO ARE THE SRN?</a></div>
+                                    <div class="aboutButton">
+                                        <a class="aboutButtonText text" onclick="aboutButtonClick()">WHO ARE THE SRN?</a>
+                                        <!--<div class="row row-listing aboutSection text myShadow aboutHidden">
+                                            <div class="col-12">
+                                                <div class="aboutText text">
+                                                    "Comment or statement about what the SRN is and what the goals/function of the Top 10 is"
+                                                </div>
+                                            </div>
+                                        </div>!-->
+                                    </div>
                                 </div>
                                 <div class="col-xs-1"></div>
                             </div>
