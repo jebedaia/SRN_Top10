@@ -1,5 +1,4 @@
 ﻿body {
-    font-family: "Open Sans" !important;
     background-color: white;
 }
 
@@ -469,7 +468,6 @@
     }
 
 .text {
-    /*font-family: "Open Sans" !important;*/
     font-size: 9pt;
 }
 
