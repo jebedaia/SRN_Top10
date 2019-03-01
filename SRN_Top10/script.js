@@ -337,7 +337,7 @@ function aboutButtonClick() {
         row = $('<div class="row row-listing aboutSection text myShadow">');
 
         column = $('<div class="col-12">');
-        column.append($('<div class="aboutText text">').html("Comment or statement about what the SRN is and what the goals/function of the Top 10 is"));
+        column.append($('<div class="aboutText text">').html("The Student Radio Network (SRN) are the undisputed arbiters of independent New Zealand music, culture and opinion, representing the freshest content, the savviest people, a volunteer staff of hundreds, and engaged audience of 10’s of thousands.The SRN is a network of established radio stations that represent the heart and conscience of a contemporary alternative community.A deliverer of innovation and invention, of music and thought, and of connection and culture."));
         row.append(column);
 
         $(".aboutButton").append(row);

@@ -12,8 +12,10 @@
     <script src="script.js" type="text/javascript"></script>
     <title>SRN - TOP 10</title>
     <link rel="shortcut icon" type="image/png" href="Logos/Mightymouth_SRN_icon.png"/>
+    
 </head>
-    <body onload="writeTop10()">
+    
+    <body onload="writeTop10()">      
         <div class="container-fluid">
             <div class="row">
                 <div class="col-xl-1"></div>
@@ -49,7 +51,7 @@
                             </div>
                             <div class="row">
                                 <div class="col-xs-12">
-                                    <div id="container-header-top10" class="hidden">
+                                    <div id="container-header-top10" >
                                         <span id="lolAnotherContainer-top10">
                                             <img class="headerImage SRN white" src="Headers/top10 bevel.png" alt="SRN TOP 10 - TE TEKAU O RUNGA" />
                                         </span>
@@ -70,7 +72,7 @@
 
                             <div class="row">
                                 <div class="col-xs-12">
-                                    <div id="container-header-hitPicks" class="hidden">
+                                    <div id="container-header-hitPicks" >
                                         <div id="lolAnotherContainer-hitPicks">
                                             <img class="headerImage HitPicks white" src="Headers/hitPicks bevel.png" alt="HIT PICKS" />
                                         </div>
@@ -88,10 +90,10 @@
                             </div>
                             <div class="row">
                                 <div class="col-xs-1"></div>
-                                <div class="col-xs-10 text-right hidden">
+                                <div class="col-xs-10 text-right">
                                     <div class="aboutButton">
                                         <a class="aboutButtonText text" onclick="aboutButtonClick()">WHO ARE THE SRN?</a>
-                                        <!--<div class="row row-listing aboutSection text myShadow aboutHidden">
+                                       <!--<div class="row row-listing aboutSection text myShadow aboutHidden">
                                             <div class="col-12">
                                                 <div class="aboutText text">
                                                     "Comment or statement about what the SRN is and what the goals/function of the Top 10 is"
@@ -113,8 +115,15 @@
                 <div class="col-xl-1"></div>
             </div>
         </div>
-        <div class="container-footer black hidden">
+        <div class="container-footer black ">
             <img class="footer float-right black" src="Footers/graph.png" alt="Footer Art" />
+        </div>
+        <div class="msgText">
+            
+            <center>
+            This site was designed and developed by Datacom who are proud to support New Zealand Music ©2019
+            </center>
+
         </div>
     </body>
 </html>
