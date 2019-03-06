@@ -82,8 +82,8 @@
 
 #lolAnotherContainer-top10 {
     top: -30%;
-    left: 0;
-    width: 100%;
+    left: 5.5%;
+    width: 90%;
     height: auto;
     position: absolute;
     overflow: hidden;
@@ -169,7 +169,7 @@
     }
 
     #lolAnotherContainer-top10 {
-        top: -36%;
+        top: -15%;
     }
 
     #lolAnotherContainer-hitPicks {
@@ -245,8 +245,8 @@
     }
 
     .headerImage.SRN {
-        left: -1.5%;
-        width: 103%;
+        left: +1.6%;
+        width: 96%;
     }
 
     .headerImage.HitPicks {
@@ -277,7 +277,7 @@
 
 @media (min-width: 1080px) {
     #container-header-top10 {
-        padding-bottom: 22%;
+        padding-bottom: 26%;
     }
 
     #container-header-hitPicks {
@@ -285,8 +285,8 @@
     }
 
     .headerImage.SRN {
-        left: -1.5%;
-        width: 103%;
+        left: -8.5%;
+        width: 115%;
     }
 
     .headerImage.HitPicks {
@@ -357,7 +357,7 @@
 
 @media (min-width: 1900px) {
     #container-header-top10 {
-        padding-bottom: 21.7%;
+        padding-bottom: 26%;
     }
 
     #container-header-hitPicks {
@@ -365,8 +365,8 @@
     }
 
     .headerImage.SRN {
-        left: -1.5%;
-        width: 103%;
+        left: -8.5%;
+        width: 115%;
     }
 
     .headerImage.HitPicks {

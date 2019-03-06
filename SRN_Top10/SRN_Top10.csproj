@@ -121,6 +121,7 @@
     <Content Include="Footers\graph.png" />
     <Content Include="Headers\hitPicks bevel.png" />
     <Content Include="Headers\hitPicks too big glow.png" />
+    <Content Include="Headers\top10 bevel - Copy.png" />
     <Content Include="Headers\top10 bevel.png" />
     <Content Include="Headers\top10 too big glow.png" />
     <Content Include="Logos\bFM_colour.jpg" />
